@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg3"
+    android:background="@drawable/rectangle_base"
     android:fillViewport="true">
 
     <LinearLayout
@@ -72,132 +72,140 @@
             <LinearLayout
                 android:id="@+id/layoutDetailAkun"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="@android:color/white"
-                android:elevation="2dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_white"
                 android:clickable="true"
+                android:elevation="2dp"
                 android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_iconuserdetail" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
-                    android:text="Detail Akun"
                     android:gravity="center_vertical"
-                    android:textSize="18sp" />
+                    android:text="Detail Akun"
+                    android:textSize="17sp" />
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="36dp"
+                    android:layout_width="16dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_arrowrightmin" />
             </LinearLayout>
 
 
             <!-- Item 2 -->
             <LinearLayout
+
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="@android:color/white"
-                android:elevation="2dp"
-                >
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_gallery" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:text="Verifikasi Identitas"
-                    android:gravity="center_vertical"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_arrowrightmin" />
-            </LinearLayout>
-
-            <!-- Item 3 -->
-
-
-            <LinearLayout
-                android:id="@+id/layoutRekeningPencairan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_white"
                 android:clickable="true"
                 android:elevation="2dp"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:orientation="horizontal"
-                android:padding="16dp">
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                >
 
                 <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_gallery" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Verifikasi Identitas"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrowrightmin" />
+            </LinearLayout>
+
+            <!-- Item 3 -->
+
+            <LinearLayout
+                android:id="@+id/layoutRekeningPencairan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_white"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_loan" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:text="Rekening Pencairan"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="36dp"
+                    android:layout_width="16dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_arrowrightmin" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layoutGantiPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="16dp"
-                android:background="@android:color/white"
-                android:elevation="2dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rectangle_white"
                 android:clickable="true"
+                android:elevation="2dp"
                 android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:layout_marginTop="12dp">
 
                 <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_key" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
-                    android:text="Ganti Password"
                     android:gravity="center_vertical"
-                    android:textSize="18sp" />
+                    android:text="Ganti Password"
+                    android:textSize="17sp" />
 
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="36dp"
+                    android:layout_width="16dp"
+                    android:layout_height="24dp"
                     android:src="@drawable/ic_arrowrightmin" />
             </LinearLayout>
+
+
 
 
         </LinearLayout>
@@ -209,7 +217,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
-            android:backgroundTint="#673AB7"
+            android:backgroundTint="#E03333"
             android:text="Log out"
             android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
