@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loan_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Bagian atas: Form Input Loan -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:background="@color/defrgreen"
+        >
+
+
+        <EditText
+            android:id="@+id/etLoanAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="40dp"
+            android:hint="Jumlah Pinjaman"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etTenor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Tenor (bulan)"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnSubmitLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajukan Pinjaman"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Separator -->
+
+
+
+
+</LinearLayout>

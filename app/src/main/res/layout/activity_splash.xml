@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/centerLogo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_height="210dp"
+        android:src="@drawable/logoname" />
+
+    <ImageView
+        android:id="@+id/bottomImage"
+        android:layout_width="wrap_content"
+        android:layout_height="103dp"
+        android:layout_below="@+id/centerLogo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="-2dp"
+        android:src="@drawable/slogan" />
+</RelativeLayout>
+

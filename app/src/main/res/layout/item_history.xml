@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_margin="8dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/tanggalpinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12 Mei 2025"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/jumlahpinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp1.000.000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/statuspinjaman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunas"
+        android:textSize="14sp" />
+</LinearLayout>

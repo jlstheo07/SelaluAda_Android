@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvLevel"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppinsbold"
+            android:includeFontPadding="false"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvLimit"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:paddingTop="30dp"
+            android:textSize="15sp"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvTenor"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvBunga"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:includeFontPadding="false"
+            android:layout_marginTop="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

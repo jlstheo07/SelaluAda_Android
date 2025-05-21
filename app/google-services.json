@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095727206479",
+    "project_id": "selaluada-3c0fb",
+    "storage_bucket": "selaluada-3c0fb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095727206479:android:3f4a77d176b0080d0d5a3a",
+        "android_client_info": {
+          "package_name": "com.example.selaluada"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzhLH7s_z8KhBQ6ZYLbjKDFNV8AB2ZC-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

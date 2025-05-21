@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="onyx">#393e41</color>
+    <color name="grey">#989B96</color>
+    <color name="ivory">#F6F7EB</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="defblue">#006ECF</color>
+    <color name="lightblue">#0A91BF</color>
+    <color name="darkblue">#1d5688</color>
+    <color name="mid">#0A91BF</color>
+    <color name="defrgreen">#14B3AF</color>
+    <color name="lightgreen">#85d5cd</color>
+    <color name="darkgreen">#277978</color>
+
+
+    <color name="red">#FF0000</color>
+    <color name="bronze">#CD7F32</color> <!-- Warna untuk Bronze -->
+    <color name="silver">#C0C0C0</color> <!-- Warna untuk Silver -->
+    <color name="gold">#FFD700</color>   <!-- Warna untuk Gold -->
+    <color name="platinum">#E5E4E2</color> <!-- Warna untuk Platinum -->
+
+    <color name="softwhite">#F2F2F2</color>
+    <color name="softyellow">#FFFFFFCC</color> <!--80% opacity -->
+
+
+</resources>

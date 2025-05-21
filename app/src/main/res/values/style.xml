@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- opsional: sesuaikan -->
+    </style>
+    <!-- Profile Header Styles -->
+    <style name="ProfileTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="ProfileSubtitle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#888888</item>
+    </style>
+
+    <!-- Info Label/Value -->
+    <style name="InfoLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="InfoValue">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="InfoValueGreen">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#00C853</item>
+    </style>
+
+    <!-- Menu Item -->
+    <style name="MenuItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+    <style name="MenuIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="MenuText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+</resources>
+
