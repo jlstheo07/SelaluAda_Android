@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/rectangle_base">
 
     <!-- Bagian atas: Form Input Loan -->
     <LinearLayout
@@ -13,7 +14,7 @@
         android:orientation="vertical"
         android:minHeight="48dp"
         android:padding="8dp"
-        android:background="@color/defrgreen"
+        android:background="@drawable/rectangle_white"
         >
 
 

@@ -8,21 +8,10 @@
     android:background="@drawable/bgauth"
     tools:context=".ui.RegisterActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/bg_ticketlinestretch"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
+    <!-- Title Tetap Di Luar Rectangle -->
     <TextView
         android:id="@+id/tvSignUpTitle"
-        android:layout_width="391dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
@@ -34,18 +23,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Name -->
+    <!-- Rectangle Container -->
+    <ImageView
+        android:id="@+id/rectangleContainer"
+        android:layout_width="346dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rectangle_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSignUpTitle" />
+
+    <!-- Full Name -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="Full Name"
-        app:layout_constraintTop_toBottomOf="@id/tvSignUpTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="@id/rectangleContainer"
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/namalengkapreg"
@@ -61,12 +63,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="Email"
         app:layout_constraintTop_toBottomOf="@id/etName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailreg"
@@ -82,13 +84,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="Password"
         app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@id/etSignUpEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passreg"
@@ -104,13 +106,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:hint="Confirm Password"
         app:endIconMode="password_toggle"
         app:layout_constraintTop_toBottomOf="@id/etSignUpPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passconreg"
@@ -125,15 +127,15 @@
         android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="@color/defrgreen"
         android:text="SIGN UP"
         android:textColor="@android:color/white"
         app:layout_constraintTop_toBottomOf="@id/etConfirmPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer" />
 
     <!-- Login Text -->
     <TextView
@@ -144,7 +146,7 @@
         android:text="Already have an account? Sign In"
         android:textColor="@color/red"
         app:layout_constraintTop_toBottomOf="@id/btnRegister"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
