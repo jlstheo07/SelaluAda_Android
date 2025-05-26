@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_iconuserdetail" />
+                    android:src="@drawable/ic_idcard2" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -121,7 +121,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_gallery" />
+                    android:src="@drawable/ic_locmap" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -130,7 +130,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/black"
                     android:gravity="center_vertical"
-                    android:text="Verifikasi Identitas"
+                    android:text="Lokasi Anda"
                     android:textSize="17sp" />
 
                 <ImageView
@@ -157,7 +157,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_loan" />
+                    android:src="@drawable/ic_wallet" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -190,9 +190,9 @@
                 android:layout_marginTop="12dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_key" />
+                    android:src="@drawable/ic_key2" />
 
                 <TextView
                     android:layout_width="0dp"

@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/rectangle_base"
     android:padding="16dp">
 
     <LinearLayout
@@ -22,7 +22,6 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:src="@drawable/ic_logoblack"
-
                 android:scaleType="centerCrop"
                 android:layout_marginEnd="12dp" />
 
@@ -45,6 +44,7 @@
 
             <TextView
                 android:text="Sisa Plafond Anda"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
@@ -69,76 +69,123 @@
         </LinearLayout>
 
         <!-- Aksi Cepat -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="3">
-
-            <LinearLayout
-                android:id="@+id/ajukanpinjaman"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/ic_loan"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp" />
-                <TextView
-                    android:text="Ajukan"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tagihanpinjaman"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/ic_apps"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp" />
-                <TextView
-                    android:text="Tagihan"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/riwayatpinjaman"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:src="@drawable/ic_listcheck"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp" />
-                <TextView
-                    android:text="Riwayat"
-                    android:textSize="14sp"
-                    android:layout_marginTop="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </LinearLayout>
 
         <!-- Promo -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:columnCount="2"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
+
+            <!-- Reusable Item Box -->
+            <!-- Kotak 1: Level -->
+            <LinearLayout
+                android:id="@+id/plafondlevel"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_levelplafond" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Level"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Kotak 2: Berita -->
+            <LinearLayout
+                android:id="@+id/location"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_locmap" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Location"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Kotak 3: Riwayat -->
+            <LinearLayout
+                android:id="@+id/riwayatpinjaman"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_history2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Riwayat"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Kotak 4: Ajukan -->
+            <LinearLayout
+                android:id="@+id/tambahanpinjaman"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_addloan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ajukan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </GridLayout>
+
         <LinearLayout
             android:orientation="vertical"
             android:background="@drawable/card_background"
@@ -150,34 +197,18 @@
             <TextView
                 android:text="🎁 Promo Khusus untuk Kamu!"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:text="Bunga hanya 0,9% jika pinjam hari ini!"
+                android:text="Perbaharui lokasi dapatkan promo daerahmu!"
                 android:textSize="14sp"
+                android:textColor="@color/red"
                 android:layout_marginTop="4dp"
-                android:textColor="#666f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <!-- Skor Kredit -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/card_background"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="History Pinjaman     "
-                android:textSize="16sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

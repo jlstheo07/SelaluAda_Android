@@ -11,36 +11,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:minHeight="48dp"
-        android:padding="8dp"
         android:background="@drawable/rectangle_white"
-        >
+        android:minHeight="48dp"
+        android:orientation="vertical"
+        android:padding="8dp">
 
 
         <EditText
             android:id="@+id/etLoanAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
             android:layout_marginTop="40dp"
             android:hint="Jumlah Pinjaman"
-            android:inputType="number" />
+            android:inputType="number"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/etTenor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
             android:hint="Tenor (bulan)"
-            android:inputType="number" />
+            android:inputType="number"
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btnSubmitLoan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ajukan Pinjaman"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:text="Ajukan Pinjaman" />
     </LinearLayout>
 
     <!-- Separator -->

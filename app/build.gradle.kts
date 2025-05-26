@@ -61,4 +61,7 @@ dependencies {
     implementation(libs.lottie)
     implementation(libs.gson)
 
+    implementation(libs.play.services.location)
+
+
 }

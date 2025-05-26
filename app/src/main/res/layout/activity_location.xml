@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_base"
+    >
+
+    <!-- Header ala iOS -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrowleftmin"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATA LOKASI"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Konten lokasi -->
+
+
+    <TextView
+        android:id="@+id/tvDetectedLocation"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="15dp"
+        android:padding="15dp"
+        android:background="@drawable/rectangle_white"
+        android:gravity="center"
+        android:text="Mendeteksi Alamat Anda..."
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btnDetectLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Deteksi Lokasi Saya"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/btnSaveLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Simpan Lokasi"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>
