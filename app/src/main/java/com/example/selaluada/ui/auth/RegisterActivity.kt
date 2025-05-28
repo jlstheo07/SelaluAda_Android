@@ -1,4 +1,4 @@
-package com.example.selaluada.ui
+package com.example.selaluada.ui.auth
 
 import android.content.Intent
 import android.os.Bundle

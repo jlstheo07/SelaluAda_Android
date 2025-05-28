@@ -64,17 +64,30 @@
                 android:background="@drawable/rectangle_white"
                 android:padding="16dp">
 
-                <!-- Pekerjaan -->
+                <!--Pekerjaan-->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="Pekerjaan" />
                 <EditText
-                    android:id="@+id/CusKota"
+                    android:id="@+id/CusPekerjaan"
                     android:minHeight="48dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Pekerjaan" />
+                    android:hint="Pekerjaan Anda Saat ini" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Gaji" />
+                <EditText
+                    android:id="@+id/CusGaji"
+                    android:minHeight="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Gaji Bulanan Anda" />
 
                 <!-- Bank -->
                 <TextView
@@ -112,7 +125,8 @@
                     android:id="@+id/spinnermetodepembayaran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:minHeight="48dp" />
+                    android:minHeight="48dp"
+                    android:background="@android:color/white"/>
 
                 <!-- Tombol Save -->
                 <Button

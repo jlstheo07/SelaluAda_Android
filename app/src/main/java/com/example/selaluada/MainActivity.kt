@@ -4,12 +4,9 @@ package com.example.selaluada
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.selaluada.ui.LoginActivity
+import com.example.selaluada.ui.auth.LoginActivity
 import com.example.selaluada.ui.ProfileFragment
 import com.example.selaluada.ui.loan.LoanFragment
 import com.example.selaluada.ui.main.MainFragment
@@ -36,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
         bottomNav.setOnItemSelectedListener { item ->
+            isLogin = SharedPreferenceUtil.isLoggedIn(this)
             when (item.itemId) {
                 R.id.nav_home -> {
                     replaceFragment(mainFragment)
@@ -46,9 +44,9 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
-
                 R.id.nav_profile -> {
                     isLogin = SharedPreferenceUtil.isLoggedIn(this)
+                    println(isLogin)
                     if (!isLogin) {
                         val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)

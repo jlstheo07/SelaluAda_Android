@@ -1,89 +1,77 @@
 package com.example.selaluada.ui.profile
 
+import android.Manifest
+import android.content.Intent
+import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.EditText
-import android.widget.ImageButton
-import android.widget.Spinner
-import androidx.activity.enableEdgeToEdge
+import android.provider.MediaStore
+import android.widget.*
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.FileProvider
 import com.example.selaluada.R
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 class IdentityActivity : AppCompatActivity() {
+
+    private lateinit var imageUri: Uri
+    private lateinit var imagePreview: ImageView
+
+    private lateinit var takePictureLauncher: ActivityResultLauncher<Uri>
+    private lateinit var pickImageLauncher: ActivityResultLauncher<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_identity)
 
         val btnBack = findViewById<ImageButton>(R.id.btnBack)
-        btnBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+        btnBack.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+
+        // Setup spinner
+        val spinnerGender: Spinner = findViewById(R.id.spinnerGender)
+        val spinnerProvinsi: Spinner = findViewById(R.id.spinnerProvinsi)
+        val genders = listOf("Pria", "Wanita")
+        val provinsi = listOf("Aceh", "Bali", "Bangka Belitung", "Banten", "Bengkulu", "DI Yogyakarta",
+            "DKI Jakarta", "Gorontalo", "Jambi", "Jawa Barat", "Jawa Tengah", "Jawa Timur",
+            "Kalimantan Barat", "Kalimantan Selatan", "Kalimantan Tengah", "Kalimantan Timur",
+            "Kalimantan Utara", "Kepulauan Riau", "Lampung", "Maluku", "Maluku Utara",
+            "Nusa Tenggara Barat", "Nusa Tenggara Timur", "Papua", "Papua Barat", "Papua Barat Daya",
+            "Papua Pegunungan", "Papua Selatan", "Papua Tengah", "Riau", "Sulawesi Barat",
+            "Sulawesi Selatan", "Sulawesi Tengah", "Sulawesi Tenggara", "Sulawesi Utara",
+            "Sumatera Barat", "Sumatera Selatan", "Sumatera Utara")
+
+        spinnerGender.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, genders)
+        spinnerProvinsi.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, provinsi)
+
+
+        imagePreview = findViewById(R.id.imagePreview)
+
+        // Register launcher
+        takePictureLauncher = registerForActivityResult(ActivityResultContracts.TakePicture()) { success ->
+            if (success) imagePreview.setImageURI(imageUri)
         }
 
-        val spinnerGender: Spinner = findViewById(R.id.spinnerGender)
-        val genders = listOf("Pria", "Wanita")
+        pickImageLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+            uri?.let { imagePreview.setImageURI(it) }
+        }
 
-        val spinnerProvinsi: Spinner = findViewById(R.id.spinnerProvinsi)
-        val provinsi = listOf(
-            "Aceh",
-            "Bali",
-            "Bangka Belitung",
-            "Banten",
-            "Bengkulu",
-            "DI Yogyakarta",
-            "DKI Jakarta",
-            "Gorontalo",
-            "Jambi",
-            "Jawa Barat",
-            "Jawa Tengah",
-            "Jawa Timur",
-            "Kalimantan Barat",
-            "Kalimantan Selatan",
-            "Kalimantan Tengah",
-            "Kalimantan Timur",
-            "Kalimantan Utara",
-            "Kepulauan Riau",
-            "Lampung",
-            "Maluku",
-            "Maluku Utara",
-            "Nusa Tenggara Barat",
-            "Nusa Tenggara Timur",
-            "Papua",
-            "Papua Barat",
-            "Papua Barat Daya",
-            "Papua Pegunungan",
-            "Papua Selatan",
-            "Papua Tengah",
-            "Riau",
-            "Sulawesi Barat",
-            "Sulawesi Selatan",
-            "Sulawesi Tengah",
-            "Sulawesi Tenggara",
-            "Sulawesi Utara",
-            "Sumatera Barat",
-            "Sumatera Selatan",
-            "Sumatera Utara"
-        )
+        findViewById<Button>(R.id.btnCamera).setOnClickListener {
+            imageUri = getImageUri()
+            takePictureLauncher.launch(imageUri)
+        }
 
+        findViewById<Button>(R.id.btnGallery).setOnClickListener {
+            pickImageLauncher.launch("image/*")
+        }
+    }
 
-
-        val genderAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, genders)
-        genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerGender.adapter = genderAdapter
-
-        val provinsiAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, provinsi)
-        provinsiAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerProvinsi.adapter = provinsiAdapter
-
-        // Jika ingin mengisi data dummy seperti gambar
-        findViewById<EditText>(R.id.CusNamaLengkap).setText("Mira Setiawan")
-        findViewById<EditText>(R.id.CusEmail).setText("mirasetiawan@company.com")
-        spinnerGender.setSelection(1) // "Wanita"
-        findViewById<EditText>(R.id.CusAlamat).setText("Jl. Pasti Cepat A7/66")
-        findViewById<EditText>(R.id.CusKota).setText("Jakarta Barat")
-        spinnerProvinsi.setSelection(0) // DKI Jakarta
-        findViewById<EditText>(R.id.CusTelepon).setText("(128) 666 070")
+    private fun getImageUri(): Uri {
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(Date())
+        val file = File(getExternalFilesDir(null), "IMG_$timeStamp.jpg")
+        return FileProvider.getUriForFile(this, "${packageName}.provider", file)
     }
 }

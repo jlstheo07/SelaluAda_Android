@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/rectangle_base">
 
-    <!-- Header ala iOS -->
+    <!-- Header -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -50,115 +50,184 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle_white"
+            android:padding="16dp">
+
+            <!-- Nama Lengkap -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Induk Kependudukan"
+                android:textColor="@color/black"/>
+            <EditText
+                android:id="@+id/CusNIK"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Induk Kependudukan" />
+
+            <!-- TTL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tempat Lahir" />
+            <EditText
+                android:id="@+id/CusTempatLahir"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Tempat Lahir" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tanggal Lahir" />
+            <EditText
+                android:id="@+id/CusTanggalLahir"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="Tanggal Lahir" />
+
+            <!-- Gender -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Gender" />
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"/>
+
+            <!-- Nomor Telepon -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nomor Telepon" />
+            <EditText
+                android:id="@+id/CusTelepon"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor Telepon"
+                android:inputType="phone" />
+
+            <!-- Nama Ibu Kandung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nama Ibu Kandung" />
+            <EditText
+                android:id="@+id/CusIbu"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Ibu Kandung" />
+
+            <!-- Alamat -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Alamat" />
+            <EditText
+                android:id="@+id/CusAlamat"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat" />
+
+            <!-- Kota -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Kabupaten/ Kota" />
+            <EditText
+                android:id="@+id/CusKota"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kabupaten/ Kota" />
+
+            <!-- Provinsi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Provinsi" />
+            <Spinner
+                android:id="@+id/spinnerProvinsi"
+                android:minHeight="48dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"/>
+
+
+
+            <!-- Foto Konsumen -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Foto Konsumen" />
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:background="#CCCCCC" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="625dp"
-                android:orientation="vertical"
-                android:background="@drawable/rectangle_white"
-                android:padding="16dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
 
-                <!-- Nama Lengkap -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nama Lengkap" />
-                <EditText
-                    android:id="@+id/CusNamaLengkap"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nama Lengkap" />
-
-                <!-- Email -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Email" />
-                <EditText
-                    android:id="@+id/CusEmail"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Email" />
-
-                <!-- Gender -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Gender" />
-                <Spinner
-                    android:id="@+id/spinnerGender"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <!-- Alamat -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Alamat" />
-                <EditText
-                    android:id="@+id/CusAlamat"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Alamat" />
-
-                <!-- Kota -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Kabupaten/ Kota" />
-                <EditText
-                    android:id="@+id/CusKota"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Kabupaten/ Kota" />
-
-                <!-- Provinsi -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Provinsi" />
-                <Spinner
-                    android:id="@+id/spinnerProvinsi"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <!-- Nomor Telepon -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Nomor Telepon" />
-                <EditText
-                    android:id="@+id/CusTelepon"
-                    android:minHeight="48dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Nomor Telepon"
-                    android:inputType="phone" />
-
-                <!-- Tombol Save -->
                 <Button
-                    android:id="@+id/btnSave"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnCamera"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SAVE"
-                    android:backgroundTint="@color/defrgreen"
-                    android:textColor="@android:color/white"
-                    android:layout_marginTop="24dp" />
+                    android:backgroundTint="@color/defblue"
+                    android:textColor="@color/ivory"
+                    android:text="Kamera" />
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/defblue"
+                    android:textColor="@color/ivory"
+                    android:text="Galeri" />
             </LinearLayout>
+
+            <!-- Tombol Save -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE"
+                android:backgroundTint="@color/defrgreen"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="24dp" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

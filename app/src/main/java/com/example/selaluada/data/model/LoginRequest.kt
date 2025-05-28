@@ -1,6 +1,7 @@
 package com.example.selaluada.data.model
 
 data class LoginRequest(
-    val username: String,
-    val password: String
+    val usernameOrEmail: String,
+    val password: String,
+    val fcmToken: String? = null
 )

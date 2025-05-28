@@ -22,6 +22,11 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.findViewById<LinearLayout>(R.id.promolocation)?.setOnClickListener {
+            val intent = Intent(requireContext(), LocationActivity::class.java)
+            startActivity(intent)
+        }
+
         // Navigasi ke PlafondActivity saat tombol "Level" ditekan
         view.findViewById<LinearLayout>(R.id.plafondlevel)?.setOnClickListener {
             val intent = Intent(requireContext(), PlafondActivity::class.java)

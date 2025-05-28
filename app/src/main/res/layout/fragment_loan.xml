@@ -16,23 +16,31 @@
         android:orientation="vertical"
         android:padding="8dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Jumlah Pinjaman" />
 
         <EditText
-            android:id="@+id/etLoanAmount"
+            android:id="@+id/CusPengajuan"
+            android:minHeight="48dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:hint="Jumlah Pinjaman"
-            android:inputType="number"
-            android:minHeight="48dp" />
+            android:hint="Nominal Pengajuan" />
 
-        <EditText
-            android:id="@+id/etTenor"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tenor" />
+
+        <Spinner
+            android:id="@+id/spinnertenorpengajuan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tenor (bulan)"
-            android:inputType="number"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:background="@android:color/white" />
 
         <Button
             android:id="@+id/btnSubmitLoan"
@@ -42,9 +50,10 @@
             android:text="Ajukan Pinjaman" />
     </LinearLayout>
 
-    <!-- Separator -->
-
-
-
-
+    <Button
+        android:id="@+id/btnUploadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Upload Data" />
 </LinearLayout>

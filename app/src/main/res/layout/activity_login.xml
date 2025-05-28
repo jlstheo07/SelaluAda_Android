@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgauth"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.auth.LoginActivity">
 
     <!-- Title tetap di luar rectangle -->
     <TextView
