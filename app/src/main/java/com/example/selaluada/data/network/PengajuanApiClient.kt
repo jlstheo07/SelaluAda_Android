@@ -1,25 +1,24 @@
 package com.example.selaluada.data.network
 
 import android.content.Context
+import android.util.Log
+import com.example.selaluada.data.service.PengajuanApiService
 import com.example.selaluada.util.SharedPreferenceUtil
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.util.Log
 
+object PengajuanApiClient {
 
-object AuthApiClient {
     private const val BASE_URL = "https://6fee-140-213-33-135.ngrok-free.app/"
 
     private var retrofitInstance: Retrofit? = null
 
-    // Membuat HTTP Client dengan interceptor untuk logging dan header Authorization
     private fun getHttpClient(context: Context): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
-
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .addInterceptor { chain ->
@@ -27,9 +26,8 @@ object AuthApiClient {
                 val requestBuilder = originalRequest.newBuilder()
                     .addHeader("Content-Type", "application/json")
 
-                // Tambahkan Authorization header jika token tersedia
                 val token = SharedPreferenceUtil.getAuthToken(context)
-                Log.d("AuthApiClient", "Token: $token")
+                Log.d("PengajuanApiClient", "Token: $token")
                 if (!token.isNullOrEmpty()) {
                     requestBuilder.addHeader("Authorization", "Bearer $token")
                 }
@@ -40,15 +38,14 @@ object AuthApiClient {
             .build()
     }
 
-    // Mendapatkan Retrofit instance (singleton)
-    fun getInstance(context: Context): Retrofit {
+    fun getInstance(context: Context): PengajuanApiService {
         if (retrofitInstance == null) {
             retrofitInstance = Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
                 .client(getHttpClient(context))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
-        return retrofitInstance!!
+        return retrofitInstance!!.create(PengajuanApiService::class.java)
     }
 }

@@ -7,6 +7,24 @@
     android:padding="16dp"
     android:background="@drawable/rectangle_base">
 
+    <!-- Profile Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajukan Pinjaman"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <!-- Bagian atas: Form Input Loan -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +32,7 @@
         android:background="@drawable/rectangle_white"
         android:minHeight="48dp"
         android:orientation="vertical"
+        android:layout_marginTop="25dp"
         android:padding="8dp">
 
         <TextView
@@ -43,17 +62,55 @@
             android:background="@android:color/white" />
 
         <Button
-            android:id="@+id/btnSubmitLoan"
+            android:id="@+id/btnSimulasiHitungan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Ajukan Pinjaman" />
+            android:text="Simulasi Hitungan" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnUploadData"
+    <LinearLayout
+        android:id="@+id/resultSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Upload Data" />
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_white"
+        android:padding="16dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtTotalPinjaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Pinjaman: Rp -" />
+
+        <TextView
+            android:id="@+id/txtBunga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bunga (5%): Rp -" />
+
+        <TextView
+            android:id="@+id/txtTotalBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Total Pembayaran: Rp -" />
+
+        <TextView
+            android:id="@+id/txtBayarPerBulan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Cicilan per Bulan: Rp -" />
+
+        <Button
+            android:id="@+id/btnuploadpinjaman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Upload Pinjaman" />
+    </LinearLayout>
 </LinearLayout>

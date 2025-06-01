@@ -18,7 +18,7 @@ interface  AuthApiService {
     @POST("auth/logout")
     fun logout(@Body request: LogoutRequest? = null): Call<Void>
 
-    @POST("auth/registerAkunCustomer")
+    @POST("api/users/register")
     fun register(@Body request: RegisterRequest): Call<RegisterResponse>
 
 }

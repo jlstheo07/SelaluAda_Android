@@ -187,9 +187,9 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Kotak 4: Ajukan -->
+            <!-- Kotak 4: Data Konsumen -->
             <LinearLayout
-                android:id="@+id/tambahanpinjaman"
+                android:id="@+id/DataKonsumen"
                 android:layout_width="125dp"
                 android:layout_height="125dp"
                 android:layout_margin="8dp"
@@ -202,13 +202,13 @@
                 <ImageView
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:src="@drawable/ic_addloan" />
+                    android:src="@drawable/ic_news" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Ajukan"
+                    android:text="Data Anda"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
             </LinearLayout>

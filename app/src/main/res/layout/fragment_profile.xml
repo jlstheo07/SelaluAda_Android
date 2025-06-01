@@ -31,41 +31,42 @@
         </LinearLayout>
 
         <!-- User Info Card -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="60dp"
-            android:background="@android:color/white"
-            android:elevation="4dp"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="@android:color/white"
-            android:gravity="center_horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginTop="60dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:elevation="4dp"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="@android:color/white"-->
+<!--            android:gravity="center_horizontal">-->
 
-            <TextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Raisa Adriana"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@android:color/black" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Raisa Adriana"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="@android:color/black" />-->
 
-            <TextView
-                android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="raisaandriana@mail.com"
-                android:textSize="14sp"
-                android:textColor="#888888" />
+<!--            <TextView-->
+<!--                android:id="@+id/tvEmail"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="raisaandriana@mail.com"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="#888888" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
         <!-- Account Details List -->
         <LinearLayout
             android:id="@+id/listprofile"
             android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 

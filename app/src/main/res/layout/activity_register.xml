@@ -27,8 +27,8 @@
     <ImageView
         android:id="@+id/rectangleContainer"
         android:layout_width="346dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="525dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rectangle_white"
@@ -44,8 +44,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:textColorHint="@color/black"
         app:boxStrokeColor="@color/darkblue"
-        android:hint="Full Name"
+        app:boxBackgroundMode="outline"
+        android:hint="Nama Lengkap"
         app:layout_constraintTop_toTopOf="@id/rectangleContainer"
         app:layout_constraintStart_toStartOf="@id/rectangleContainer"
         app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
@@ -60,15 +62,41 @@
 
     <!-- Email -->
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUsernamer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/darkblue"
+        app:boxBackgroundMode="outline"
+        android:hint="Username"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="@id/rectangleContainer"
+        app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernamereg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email -->
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etSignUpEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:textColorHint="@color/black"
         app:boxStrokeColor="@color/darkblue"
+        app:boxBackgroundMode="outline"
         android:hint="Email"
-        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintTop_toBottomOf="@id/etUsernamer"
         app:layout_constraintStart_toStartOf="@id/rectangleContainer"
         app:layout_constraintEnd_toEndOf="@id/rectangleContainer">
 

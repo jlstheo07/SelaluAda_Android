@@ -44,8 +44,9 @@ class MainFragment : Fragment() {
             startActivity(intent)
         }
 
-        view.findViewById<LinearLayout>(R.id.tambahanpinjaman)?.setOnClickListener {
-            // Contoh: Navigasi ke AjukanPinjamanActivity atau Fragment
+        view.findViewById<LinearLayout>(R.id.DataKonsumen)?.setOnClickListener {
+            val intent = Intent(requireContext(), DataActivity::class.java)
+            startActivity(intent)
         }
     }
 }

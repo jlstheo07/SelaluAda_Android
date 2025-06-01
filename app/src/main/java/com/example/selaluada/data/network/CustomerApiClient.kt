@@ -1,25 +1,24 @@
 package com.example.selaluada.data.network
 
 import android.content.Context
+import android.util.Log
+import com.example.selaluada.data.service.CustomerApiService
 import com.example.selaluada.util.SharedPreferenceUtil
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.util.Log
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 
-
-object AuthApiClient {
+object CustomerApiClient {
     private const val BASE_URL = "https://6fee-140-213-33-135.ngrok-free.app/"
 
     private var retrofitInstance: Retrofit? = null
 
-    // Membuat HTTP Client dengan interceptor untuk logging dan header Authorization
     private fun getHttpClient(context: Context): OkHttpClient {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
-
+        // bisa pakai interceptor seperti AuthApiClient juga kalau perlu token
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .addInterceptor { chain ->
@@ -40,15 +39,14 @@ object AuthApiClient {
             .build()
     }
 
-    // Mendapatkan Retrofit instance (singleton)
-    fun getInstance(context: Context): Retrofit {
+    fun getInstance(context: Context): CustomerApiService {
         if (retrofitInstance == null) {
             retrofitInstance = Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
                 .client(getHttpClient(context))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
-        return retrofitInstance!!
+        return retrofitInstance!!.create(CustomerApiService::class.java)
     }
 }
