@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sisa Plafond Anda"
+                android:text="Level Plafond Anda"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Rp 1.500.000"
+                android:text="TOPAZ"
                 android:textColor="#000"
                 android:textSize="22sp"
                 android:textStyle="bold" />

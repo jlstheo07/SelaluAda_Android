@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object PengajuanApiClient {
 
-    private const val BASE_URL = "https://6fee-140-213-33-135.ngrok-free.app/"
+    private const val BASE_URL = " https://c5b0-140-213-7-34.ngrok-free.app/"
 
     private var retrofitInstance: Retrofit? = null
 
